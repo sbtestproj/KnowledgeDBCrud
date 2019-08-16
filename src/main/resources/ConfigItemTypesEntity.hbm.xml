@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ConfigItemTypes.ConfigItemTypesEntity" table="config_item_types" schema="public" catalog="example">
+        <id name="configItemTypesId">
+            <column name="config_item_types_id" sql-type="bigint"/>
+        </id>
+        <property name="configItemTypeName">
+            <column name="config_item_type_name" sql-type="varchar(250)" length="250"/>
+        </property>
+    </class>
+</hibernate-mapping>

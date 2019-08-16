@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/example</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="show_sql">true</property>
+    <property name="hibernate.search.lucene_version">LUCENE_CURRENT</property>
+
+    <mapping class="ConfigSources.ConfigSourcesEntity"/>
+    <mapping resource="ConfigSourcesEntity.hbm.xml"/>
+    <mapping class="Entities.EntitiesEntity"/>
+    <mapping resource="EntitiesEntity.hbm.xml"/>
+    <mapping class="ConfigItemTypes.ConfigItemTypesEntity"/>
+    <mapping resource="ConfigItemTypesEntity.hbm.xml"/>
+    <mapping class="ConfigItems.ConfigItemsEntity"/>
+    <mapping resource="ConfigItemsEntity.hbm.xml"/>
+    <mapping class="Modules.ModulesEntity"/>
+    <mapping resource="ModulesEntity.hbm.xml"/>
+    <mapping class="ModuleVersions.ModuleVersionsEntity"/>
+    <mapping resource="ModuleVersionsEntity.hbm.xml"/>
+    <mapping resource="EntityModuleRelationsEntity.hbm.xml"/>
+    <mapping class="EntityTypes.EntityTypesEntity"/>
+    <mapping resource="EntityTypesEntity.hbm.xml"/>
+    <mapping class="ConfigSourceTypes.ConfigSourceTypesEntity"/>
+    <mapping resource="ConfigSourceTypesEntity.hbm.xml"/>
+    <mapping class="EntityModuleRelations.EntityModuleRelationsEntity"/>
+    <mapping resource="EntityModuleRelationsEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

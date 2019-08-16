@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="KnowledgeDBCrud:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>KnowledgeDBCrud</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="KnowledgeDBCrud-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="KnowledgeDBCrud:war exploded" />
+    </root>
+  </artifact>
+</component>

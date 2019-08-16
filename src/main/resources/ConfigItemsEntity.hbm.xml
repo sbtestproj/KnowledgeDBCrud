@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ConfigItems.ConfigItemsEntity" table="config_items" schema="public" catalog="example">
+        <id name="configItemsId">
+            <column name="config_items_id" sql-type="bigint"/>
+        </id>
+        <property name="configSourcesId">
+            <column name="config_sources_id" sql-type="bigint"/>
+        </property>
+        <property name="dataTypesId">
+            <column name="data_types_id" sql-type="bigint"/>
+        </property>
+        <property name="moduleVersionsId">
+            <column name="module_versions_id" sql-type="bigint"/>
+        </property>
+        <property name="configItemTypesId">
+            <column name="config_item_types_id" sql-type="bigint"/>
+        </property>
+        <property name="configItemName">
+            <column name="config_item_name" sql-type="varchar(250)" length="250"/>
+        </property>
+        <property name="minValue">
+            <column name="min_value" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="maxValue">
+            <column name="max_value" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="defaultValue">
+            <column name="default_value" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="configItemDescription">
+            <column name="config_item_description" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="referenceDescription">
+            <column name="reference_description" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="columnOrdinalPosition">
+            <column name="column_ordinal_position" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="Nullable">
+            <column name="is_nullable" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="verifiedByExpert">
+            <column name="verified_by_expert" sql-type="boolean"/>
+        </property>
+        <property name="dynamicFlag">
+            <column name="dynamic_flag" sql-type="boolean"/>
+        </property>
+        <property name="ignoreFlag">
+            <column name="ignore_flag" sql-type="boolean"/>
+        </property>
+        <property name="PrimaryKey">
+            <column name="is_primary_key" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="ForeignKey">
+            <column name="is_foreign_key" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="readOnlyFlag">
+            <column name="read_only_flag" sql-type="boolean" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

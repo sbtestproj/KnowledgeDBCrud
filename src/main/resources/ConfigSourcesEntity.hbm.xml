@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ConfigSources.ConfigSourcesEntity" table="config_sources" schema="public" catalog="example">
+        <id name="configSourcesId">
+            <column name="config_sources_id" sql-type="bigint"/>
+        </id>
+        <property name="configSourceTypesId">
+            <column name="config_source_types_id" sql-type="bigint"/>
+        </property>
+        <property name="configSourceName">
+            <column name="config_source_name" sql-type="varchar(250)" length="250"/>
+        </property>
+        <property name="configSourceLocation">
+            <column name="config_source_location" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="configSourceDescription">
+            <column name="config_source_description" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

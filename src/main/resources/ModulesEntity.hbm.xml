@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modules.ModulesEntity" table="modules" schema="public" catalog="example">
+        <id name="modulesId">
+            <column name="modules_id" sql-type="bigint"/>
+        </id>
+        <property name="moduleName">
+            <column name="module_name" sql-type="varchar(250)" length="250"/>
+        </property>
+        <property name="moduleDescription">
+            <column name="module_description" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="responsiblePerson">
+            <column name="responsible_person" sql-type="varchar(100)" length="100"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ModuleVersions.ModuleVersionsEntity" table="module_versions" schema="public" catalog="example">
+        <id name="moduleVersionsId">
+            <column name="module_versions_id" sql-type="bigint"/>
+        </id>
+        <property name="modulesId">
+            <column name="modules_id" sql-type="bigint"/>
+        </property>
+        <property name="versionNumber">
+            <column name="version_number" sql-type="varchar(100)" length="100"/>
+        </property>
+    </class>
+</hibernate-mapping>
